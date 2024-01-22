@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("./assets/fonts/Helvetica-Font/Helvetica-Bold.ttf") format("ttf"),
+      url("./assets/fonts/Helvetica-Font/Helvetica-BoldOblique.ttf") format("ttf"),
+      url("./assets/fonts/Helvetica-Font/helvetica-compressed-5871d14b6903a.otf")
+        format("otf"),
+      url("./assets/fonts/Helvetica-Font/helvetica-light-587ebe5a59211.ttf")
+        format("ttf"),
+      url("./assets/fonts/Helvetica-Font/Helvetica-Oblique.ttf") format("ttf"),
+      url("./assets/fonts/Helvetica-Font/helvetica-rounded-bold-5871d05ead8de.otf")
+        format("otf"),
+      url("./assets/fonts/Helvetica-Font/Helvetica.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
