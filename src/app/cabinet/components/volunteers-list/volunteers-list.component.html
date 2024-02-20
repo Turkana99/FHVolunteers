@@ -21,45 +21,68 @@
         <th *ngFor="let col of columns">
           {{ col.header }}
           <form>
-            <div *ngIf="col.header == 'Soyad,ad,atasının adı'" class="pt-2">
-              <input
-                type="text"
-                pInputText
-                placeholder="Soyad,ad,atasının adı"
-              />
-            </div>
-            <div *ngIf="col.header == 'Cins'" class="pt-2">
-              <input type="text" pInputText placeholder="Seçin" />
-            </div>
-            <div *ngIf="col.header == 'Doğum tarixi'" class="pt-2">
-              <input type="text" pInputText placeholder="Doğum tarixi" />
-            </div>
-            <div *ngIf="col.header == 'FIN kod'" class="pt-2">
-              <input type="text" pInputText placeholder="FIN kod" />
-            </div>
-            <div *ngIf="col.header == 'Ailə vəziyyəti'" class="pt-2">
-              <input type="text" pInputText placeholder="Ailə vəziyyəti" />
-            </div>
-            <div *ngIf="col.header == 'Əlaqə nömrəsi'" class="pt-2">
-              <input type="text" pInputText placeholder="Əlaqə nömrəsi" />
-            </div>
-            <div *ngIf="col.header == 'Elektron-poçt'" class="w-100 pt-2">
-              <input type="text" pInputText placeholder="Elektron-poçt" />
-            </div>
-            <div *ngIf="col.header == 'Fəaliyyətə başlama tarixi'" class=" pt-2">
-              <input
-                type="text"
-                pInputText
-                placeholder="Fəaliyyətə başlama tarixi"
-              />
-            </div>
-            <div *ngIf="col.header == 'Fəaliyyətin bitmə tarixi'" class="w-100 pt-2">
-              <input
-                type="text"
-                pInputText
-                placeholder="Fəaliyyətin bitmə tarixi"
-              />
-            </div>
+            <input
+              *ngIf="col.header == 'Soyad,ad,atasının adı'"
+              type="text"
+              pInputText
+              placeholder="Soyad,ad,atasının adı"
+            />
+
+            <input
+              *ngIf="col.header == 'Cins'"
+              type="text"
+              pInputText
+              placeholder="Seçin"
+            />
+
+            <input
+              *ngIf="col.header == 'Doğum tarixi'"
+              type="text"
+              pInputText
+              placeholder="Doğum tarixi"
+            />
+
+            <input
+              *ngIf="col.header == 'FIN kod'"
+              type="text"
+              pInputText
+              placeholder="FIN kod"
+            />
+
+            <input
+              *ngIf="col.header == 'Ailə vəziyyəti'"
+              type="text"
+              pInputText
+              placeholder="Ailə vəziyyəti"
+            />
+
+            <input
+              *ngIf="col.header == 'Əlaqə nömrəsi'"
+              type="text"
+              pInputText
+              placeholder="Əlaqə nömrəsi"
+            />
+
+            <input
+              *ngIf="col.header == 'Elektron-poçt'"
+              type="text"
+              pInputText
+              placeholder="Elektron-poçt"
+            />
+
+            <input
+              *ngIf="col.header == 'Fəaliyyətə başlama tarixi'"
+              type="text"
+              pInputText
+              placeholder="Fəaliyyətə başlama tarixi"
+            />
+
+            <input
+              *ngIf="col.header == 'Fəaliyyətin bitmə tarixi'"
+              type="text"
+              pInputText
+              placeholder="Fəaliyyətin bitmə tarixi"
+            />
           </form>
         </th>
         <th><i class="fa-solid fa-filter"></i></th>
