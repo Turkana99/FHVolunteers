@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 /* src/styles.css */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 @font-face {
     font-family: "Helvetica";
@@ -20,3 +19,8 @@
     font-weight: normal;
     font-style: normal;
   }
+  
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

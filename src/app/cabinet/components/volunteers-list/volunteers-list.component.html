@@ -1,0 +1,92 @@
+<div class="vlt-title d-flex justify-content-between align-items-center">
+  <h1 class="p-0 m-0">KÖNÜLLÜLƏR</h1>
+  <div class="btns d-flex">
+    <button class="det-filter">
+      <i class="fa-solid fa-filter"></i> Detallı filter et
+    </button>
+    <button class="new-vlt"><i class="fa-solid fa-plus"></i> Əlavə et</button>
+    <button class="export"><i class="fa-solid fa-download"></i> Export</button>
+  </div>
+</div>
+
+<div class="volunteers-table pt-3">
+  <p-table
+    [columns]="cols"
+    [value]="volunteers"
+    dataKey="id"
+    [tableStyle]="{ 'min-width': '70rem' }"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{ col.header }}
+          <form>
+            <div *ngIf="col.header == 'Soyad,ad,atasının adı'" class="pt-2">
+              <input
+                type="text"
+                pInputText
+                placeholder="Soyad,ad,atasının adı"
+              />
+            </div>
+            <div *ngIf="col.header == 'Cins'" class="pt-2">
+              <input type="text" pInputText placeholder="Seçin" />
+            </div>
+            <div *ngIf="col.header == 'Doğum tarixi'" class="pt-2">
+              <input type="text" pInputText placeholder="Doğum tarixi" />
+            </div>
+            <div *ngIf="col.header == 'FIN kod'" class="pt-2">
+              <input type="text" pInputText placeholder="FIN kod" />
+            </div>
+            <div *ngIf="col.header == 'Ailə vəziyyəti'" class="pt-2">
+              <input type="text" pInputText placeholder="Ailə vəziyyəti" />
+            </div>
+            <div *ngIf="col.header == 'Əlaqə nömrəsi'" class="pt-2">
+              <input type="text" pInputText placeholder="Əlaqə nömrəsi" />
+            </div>
+            <div *ngIf="col.header == 'Elektron-poçt'" class="w-100 pt-2">
+              <input type="text" pInputText placeholder="Elektron-poçt" />
+            </div>
+            <div *ngIf="col.header == 'Fəaliyyətə başlama tarixi'" class=" pt-2">
+              <input
+                type="text"
+                pInputText
+                placeholder="Fəaliyyətə başlama tarixi"
+              />
+            </div>
+            <div *ngIf="col.header == 'Fəaliyyətin bitmə tarixi'" class="w-100 pt-2">
+              <input
+                type="text"
+                pInputText
+                placeholder="Fəaliyyətin bitmə tarixi"
+              />
+            </div>
+          </form>
+        </th>
+        <th><i class="fa-solid fa-filter"></i></th>
+        <th><i class="fa-solid fa-arrows-rotate"></i></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">
+          {{ rowData[col.field] }}
+        </td>
+        <td class="edit-icon custom-col-icon">
+          <i class="fa-solid fa-pen"></i>
+        </td>
+        <td class="delete-icon custom-col-icon">
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <mat-paginator
+    class="py-3 px-0 m-0"
+    [length]="100"
+    [pageSize]="8"
+    [pageSizeOptions]="[8, 16, 50, 100]"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>

@@ -1,0 +1,15 @@
+<div
+  class="main-content d-flex flex-column"
+  style="padding: 10px; padding-bottom: 0; gap: 10px; overflow: hidden;" 
+>
+  <div class="d-flex" style="height: calc(100vh - 20px); gap: 10px">
+    <app-sidebar></app-sidebar>
+    <div class="d-flex flex-column" style="width: 100%; gap: 10px">
+      <app-header></app-header>
+      <div class="chg-content">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

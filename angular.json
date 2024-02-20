@@ -34,7 +34,9 @@
               "src/styles.scss",
               "node_modules/tailwindcss/base.css",
               "node_modules/tailwindcss/components.css",
-              "node_modules/tailwindcss/utilities.css"
+              "node_modules/tailwindcss/utilities.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -101,7 +103,9 @@
               "src/styles.scss",
               "node_modules/tailwindcss/base.css",
               "node_modules/tailwindcss/components.css",
-              "node_modules/tailwindcss/utilities.css"
+              "node_modules/tailwindcss/utilities.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }

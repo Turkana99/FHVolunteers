@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VolunteersListComponent } from './companents/volunteers-list/volunteers-list.component';
-import { LoginComponent } from './companents/login/login.component';
-import { RegisterComponent } from './companents/register/register.component';
-import { NewVolunteerComponent } from './companents/new-volunteer/new-volunteer.component';
-import { VolunteerDetailsComponent } from './companents/volunteer-details/volunteer-details.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { CabinetGuard } from './core/guards/cabinet.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/volunteers-list', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'volunteers-list', component: VolunteersListComponent},
-  { path: 'volunteer-details', component: VolunteerDetailsComponent },
-  { path: 'new-volunteer', component: NewVolunteerComponent },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'login'
+  },
+  {
+    path: '',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '',
+    loadChildren: () => import('./cabinet/cabinet.module').then(m => m.CabinetModule),
+    canActivate: [CabinetGuard]
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

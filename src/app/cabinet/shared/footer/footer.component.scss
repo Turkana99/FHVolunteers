@@ -1,0 +1,9 @@
+@import "../../../../styles/variables.scss";
+.footer {
+  gap: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: $main-green;
+  padding: 15px;
+  border-radius: 12px;
+}
