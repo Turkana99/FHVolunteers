@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Table } from 'primeng/table';
 import { VolunteersService } from 'src/app/core/services/volunteers.service';
 
 interface Column {
@@ -25,6 +26,7 @@ export interface Volunteers {
   styleUrls: ['./volunteers-list.component.scss']
 })
 export class VolunteersListComponent implements OnInit{
+  // @ViewChild('dataTable') dataTable: Table;
 
   volunteers!: Volunteers[];
 
@@ -50,5 +52,11 @@ export class VolunteersListComponent implements OnInit{
           { field: 'endDate', header: 'Fəaliyyətin bitmə tarixi' },
       ];
   }
-
+//   calculateTableHeight(): string {
+//     const windowHeight = window.innerHeight;
+//     const headerHeight = this.dataTable.el.nativeElement.querySelector('.p-datatable-scrollable-header').clientHeight;
+//     const footerHeight = this.dataTable.el.nativeElement.querySelector('.p-datatable-scrollable-footer').clientHeight;
+//     const tableHeight = windowHeight - headerHeight - footerHeight - 50; // 50 piksellik boşluq üçün
+//     return tableHeight + 'px';
+// }
 }

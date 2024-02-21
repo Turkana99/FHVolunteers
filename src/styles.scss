@@ -3,24 +3,32 @@
 
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+@import "styles/variables.scss";
 
 @font-face {
-    font-family: "Helvetica";
-    src: url("./assets/fonts/Helvetica-Font/Helvetica-Bold.ttf") format("ttf"),
-      url("./assets/fonts/Helvetica-Font/Helvetica-BoldOblique.ttf") format("ttf"),
-      url("./assets/fonts/Helvetica-Font/helvetica-compressed-5871d14b6903a.otf")
-        format("otf"),
-      url("./assets/fonts/Helvetica-Font/helvetica-light-587ebe5a59211.ttf")
-        format("ttf"),
-      url("./assets/fonts/Helvetica-Font/Helvetica-Oblique.ttf") format("ttf"),
-      url("./assets/fonts/Helvetica-Font/helvetica-rounded-bold-5871d05ead8de.otf")
-        format("otf"),
-      url("./assets/fonts/Helvetica-Font/Helvetica.ttf") format("ttf");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Helvetica";
+  src: url("./assets/fonts/Helvetica-Font/Helvetica-Bold.ttf") format("ttf"),
+    url("./assets/fonts/Helvetica-Font/Helvetica-BoldOblique.ttf") format("ttf"),
+    url("./assets/fonts/Helvetica-Font/helvetica-compressed-5871d14b6903a.otf")
+      format("otf"),
+    url("./assets/fonts/Helvetica-Font/helvetica-light-587ebe5a59211.ttf")
+      format("ttf"),
+    url("./assets/fonts/Helvetica-Font/Helvetica-Oblique.ttf") format("ttf"),
+    url("./assets/fonts/Helvetica-Font/helvetica-rounded-bold-5871d05ead8de.otf")
+      format("otf"),
+    url("./assets/fonts/Helvetica-Font/Helvetica.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
-//   body {
-//     max-width: 100%;
-//     overflow-x: hidden;
-// }
+/*Scroll style start*/
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main-green;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

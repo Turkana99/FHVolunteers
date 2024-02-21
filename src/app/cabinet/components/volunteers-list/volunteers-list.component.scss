@@ -1,22 +1,23 @@
 @import "../../../../styles/variables.scss";
 
 .vlt-title {
-    padding: 10px;
+  padding: 10px;
   h1 {
     color: $main-green;
     font-size: 40px;
     font-weight: bold;
   }
-  .new-vlt{
+  .new-vlt {
     background-color: $main-green;
     color: white;
     padding: 9px 30px;
     border-radius: 12px;
   }
-  .btns{
+  .btns {
     gap: 10px;
   }
-  .det-filter,.export{
+  .det-filter,
+  .export {
     border: 2px solid $main-green;
     color: $main-green;
     font-weight: bold;
@@ -25,11 +26,13 @@
   }
 }
 //Table style
-:ng-deep .p-datatable-wrapper, :ng-deep .p-datatable-table, :ng-deep .p-datatable-thead tr {
+:ng-deep .p-datatable-wrapper,
+:ng-deep .p-datatable-table,
+:ng-deep .p-datatable-thead tr {
   font-family: "Helvetica", sans-serif;
   border: 1px solid #e5e7eb !important;
 }
-.p-inputtext{
+.p-inputtext {
   padding: 8px 5px;
   font-weight: normal;
   font-size: 13px;
@@ -77,7 +80,10 @@
 .delete-icon {
   color: red;
 }
-
+::ng-deep .p-scroller .p-scroller-inline .ng-star-inserted {
+    overflow-x: auto;
+    overflow-y: hidden!important;
+}
 //Pagination
 ::ng-deep .mat-mdc-paginator-container {
   color: #718096 !important;

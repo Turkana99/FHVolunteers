@@ -9,12 +9,17 @@
   </div>
 </div>
 
-<div class="volunteers-table pt-3">
+<div class="volunteers-table pt-3 w-100">
   <p-table
+    #dataTable
     [columns]="cols"
     [value]="volunteers"
     dataKey="id"
-    [tableStyle]="{ 'min-width': '70rem' }"
+    [style]="{'overflow-y':'none'}"
+    [scrollDirection]="'horizontal'"
+    [virtualScroll]="true"
+    [virtualRowHeight]="30"
+    scrollHeight="1000vh"
   >
     <ng-template pTemplate="header" let-columns>
       <tr>
@@ -22,6 +27,7 @@
           {{ col.header }}
           <form>
             <input
+            class="ps-3 pe-5"
               *ngIf="col.header == 'Soyad,ad,atasının adı'"
               type="text"
               pInputText
@@ -42,6 +48,7 @@
               placeholder="Doğum tarixi"
             />
 
+            
             <input
               *ngIf="col.header == 'FIN kod'"
               type="text"
